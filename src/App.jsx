@@ -4,16 +4,10 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { Box, KeyboardControls } from "@react-three/drei";
 import { useRef, useState } from "react";
 import { Player } from "./objects/player";
+import { Floor } from "./objects/floor";
+import { Boxes } from "./objects/boxes";
 
 function Scene() {
-   const [rotate, setRotate] = useState(true);
-
-  const playerRef = useRef();
-
-  useFrame(() => {
-    // if (rotate) playerRef.current.rotation.y += 0.02;
-  });
-
   return (
     <KeyboardControls map={[
       { keys: ["a", "ArrowLeft"], name: "moveLeft" },
@@ -23,10 +17,11 @@ function Scene() {
       <ambientLight />
       <pointLight position={[10, 10, 10]} />
       <Player />
+      <Floor />
+        <Boxes />
     </KeyboardControls>
   )
 }
-
 
 
 function App() {
