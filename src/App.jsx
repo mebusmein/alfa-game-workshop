@@ -1,24 +1,29 @@
-import { useState, useRef } from 'react'
-import './App.css'
-import { Canvas, useFrame } from '@react-three/fiber'
-import { Box } from '@react-three/drei'
 
+import "./App.css";
+import { Canvas, useFrame } from "@react-three/fiber";
+import { Box, KeyboardControls } from "@react-three/drei";
+import { useRef, useState } from "react";
+import { Player } from "./objects/player";
 
-function Stage() {
+function Scene() {
+   const [rotate, setRotate] = useState(true);
 
-  const boxRef = useRef()
+  const playerRef = useRef();
 
-  useFrame(({ }) => {
-    boxRef.current.rotation.x += 0.01
-    boxRef.current.rotation.y += 0.01
-  })
+  useFrame(() => {
+    // if (rotate) playerRef.current.rotation.y += 0.02;
+  });
 
   return (
-    <>
-    <Box ref={boxRef} args={[1, 1, 1]} position={[0, 0, 0]}>
-      <meshStandardMaterial color="hotpink" />
-    </Box>
-    </>
+    <KeyboardControls map={[
+      { keys: ["a", "ArrowLeft"], name: "moveLeft" },
+      { keys: ["d", "ArrowRight"], name: "moveRight" },
+      { keys: ["Space"], name: "jump" }
+  ]}>
+      <ambientLight />
+      <pointLight position={[10, 10, 10]} />
+      <Player />
+    </KeyboardControls>
   )
 }
 
@@ -32,7 +37,7 @@ function App() {
     }}>
       <ambientLight  />
       <pointLight position={[10, 10, 10]} />
-      <Stage />
+      <Scene />
     </Canvas>
   )
 }
