@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "sandbox": "APP_ENV=sandbox vite",
     "build": "vite build",
     "preview": "vite preview"
   },
