@@ -25,15 +25,21 @@ function Stage() {
 
 
 function App() {
+
+  const [show, setShow] = useState(false)
+
   return (
-    <Canvas camera={{
-      position: [0, 2, 10],
-      fov: 75,
-    }}>
-      <ambientLight  />
-      <pointLight position={[10, 10, 10]} />
-      <Stage />
-    </Canvas>
+    <>
+      <button onClick={() => setShow(show => !show)}>Click me</button>
+      <Canvas camera={{
+        position: [0, 2, 10],
+        fov: 75,
+      }}>
+        <ambientLight  />
+        <pointLight position={[10, 10, 10]} />
+       { show && <Stage />}
+      </Canvas>
+      </>
   )
 }
 
