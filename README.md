@@ -1,5 +1,16 @@
 # alfa-game-workshop
 
+### Opdracht
+
+- Fork deze repo
+- Zet een ontwikkel omgeving op (eigen computer/CodeSandbox)
+- Bouw een minimale 3d scene
+- Deploy deze op vercel
+- Ontwikkel je website verder
+  - voeg game assets toe
+  - voeg gameplay toe
+- Deel je website met de andere studenten!
+
 ### Resources:
 
 - [React Three Fiber](https://docs.pmnd.rs/react-three-fiber/): Three.js Renderer
@@ -9,19 +20,20 @@
 - [Vite](https://vitejs.dev/guide/): Static Web Server
 - [CodeSandbox](https://codesandbox.io/docs/configuration): Online Prototyping Container (optional)
 
-### Installation
+### Locale Instalatie
+
+Clone het repo
+
+Installer packages
 
 ```
 npm install
 ```
 
-### Scripts
+Start ontwikkel server
 
 ```
 npm run dev
-npm run build
-npm run preview
-npm run sandbox
 ```
 ### CodeSandbox
 To create a sandbox from this starter, [import your repository URL](https://codesandbox.io/dashboard/repositories) (this repo works too)
