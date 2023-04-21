@@ -13,6 +13,7 @@
 
 ### Resources:
 
+- [Vercel](https://vercel.com/): Paas webserver
 - [React Three Fiber](https://docs.pmnd.rs/react-three-fiber/): Three.js Renderer
 - [Drei](https://github.com/pmndrs/drei): React Three Fiber Helpers
 - [React Spring](http://https://www.react-spring.dev/): React animation library
